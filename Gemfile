@@ -43,7 +43,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
   gem 'capistrano-ssh-doctor'
-  gem "net-ssh", "~> 4.2.0"
+  gem "net-ssh", "~> 2.7.1"
 end
 
 group :development do
