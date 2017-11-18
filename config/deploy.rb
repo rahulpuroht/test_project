@@ -66,6 +66,11 @@ set :pty, true
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+set :ssh_options, {
+#    keys: %w(/home/rlisowski/.ssh/id_rsa),
+forward_agent: true
+#auth_methods: %w(password)
+}
 
 namespace :deploy do
 
