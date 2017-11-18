@@ -44,7 +44,7 @@ set :repo_url, 'https://github.com/rahulpuroht/test_project.git'
 set :deploy_to, '/home/ubuntu/testing_jenkins'
 
 # Default branch is :master
-ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default value for :format is :pretty
 set :format, :pretty
