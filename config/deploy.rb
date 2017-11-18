@@ -36,7 +36,7 @@ lock "3.8.1"
 set :application, 'test'
 
 # Default value for :scm is :git
-set :scm, :git
+# set :scm, :git
 # set :repo_url, 'git@bitbucket.org:mobiloitteinc/mpossoftwareshopkeeperwithprinteranddrawerintegration-15082381.git'
 set :repo_url, 'https://github.com/rahulpuroht/test_project.git'
 
