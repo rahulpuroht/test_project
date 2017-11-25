@@ -7,8 +7,8 @@ RSpec.describe "Welcome", type: :request do
       get '/'
     end
 
-    it "should have the right url" do
-      get '/home'
-    end
+   # it "should have the right url" do
+   #   get '/home'
+   # end
 
 end
