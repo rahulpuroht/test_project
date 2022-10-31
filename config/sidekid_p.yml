@@ -1,0 +1,53 @@
+---
+#- :tag: default          - Every tag creates a new process
+#  :concurrency: 30       - Number of threads for this process. Please use small numbers
+#  :queues:               - List of queues that will be processed by this process
+#  - - default            - Queue name
+#    - 30                 - Priority of queue within the process. Please use small numbers
+
+- :tag: heavy_sidekiq
+  :concurrency: 5
+  :queues:
+  - [import_prospects_delayed_high_priority, 24]
+  - [import_prospects_delayed_low_priority, 18]
+  - [import_prospects_delayed, 12]
+  - [bulk_users_operations, 4]
+  - [critical_notification, 1]
+  - [scheduled_notification, 1]
+  - [import_prospects, 18]
+  - [export_daily_report, 2]
+  - [archive_old_data, 1]
+  - [default, 1]
+  - [apply_rules_bulk, 2]
+  
+- :tag: medium_sidekiq
+  :concurrency: 10
+  :queues:
+  - [import_prospects_delayed_high_priority, 24]
+  - [import_prospects_delayed_low_priority, 18]
+  - [import_prospects_delayed, 12]
+  - [apply_rules, 10]
+  - [critical_notification, 6]
+  - [scheduled_notification, 4]
+  - [bulk_users_operations, 3]
+  - [default, 2]
+  - [cron_jobs, 1]
+  
+
+- :tag: light_sidekiq
+  :concurrency: 18
+  :queues:
+  - [apply_rules, 10]
+  - [critical_notification, 5]
+  - [scheduled_notification, 4]
+  - [prospects_bulk_update, 1]
+  - [default, 1]
+
+- :tag: exportjobs_sidekiq
+  :concurrency: 5
+  :queues:
+  - [exports, 50]
+  - [import_prospects_delayed_high_priority, 24]
+  - [import_prospects_delayed_low_priority, 18]
+  - [import_prospects_delayed, 12]
+  - [default, 1]
