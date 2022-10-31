@@ -1,0 +1,22 @@
+---
+active_campaign_dd_options_for_user:
+  :production: 30.minutes
+  :staging: 1.hours
+assign_to_options_for_reassign:
+  :production: 30.minutes
+  :staging: 1.hours
+all_campaign_dispositions:
+  :production: 30.minutes
+  :staging: 1.hours
+prospects_handlers_dd_options:
+  :production: 30.minutes
+  :staging: 1.hours
+trial_license:
+  :production: 3.hours
+  :staging: 1.hours
+active_users_count: 
+  :production: 3.hours
+  :staging: 1.hours
+current_user_license_count:
+  :production: 3.hours
+  :staging: 1.hours
